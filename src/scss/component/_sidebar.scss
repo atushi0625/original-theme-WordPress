@@ -1,0 +1,46 @@
+@use '../global/responsive'as *;
+@use '../global/variable'as *;
+
+.sidebar {
+     width: 100%;
+
+     @include pc {
+          padding: 0 0.8rem;
+          flex: 0 0 33.33333%;
+          max-width: 33.33333%;
+     }
+
+}
+
+.sidebar-HairCat {
+     margin-bottom: 1.875rem;
+
+     .sidebar-HairCat_Title {
+          margin-bottom: 1.2rem;
+          padding-top: 1rem;
+          border-top: 2px solid $footer-border-color;
+          font-size: 1.125rem;
+     }
+}
+
+.sidebar-HairCat_Items {
+     li {
+          padding: 1rem 0;
+
+          &:not(:last-child) {
+               border-bottom: 1px solid #D5D1CA;
+          }
+
+     }
+}
+
+
+.widget-list {
+     li {
+          padding: 1rem 0;
+
+          &:not(:last-child) {
+               border-bottom: 1px solid #D5D1CA;
+          }
+     }
+}

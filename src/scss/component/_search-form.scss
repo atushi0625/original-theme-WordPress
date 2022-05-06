@@ -1,0 +1,41 @@
+@use '../global/responsive'as *;
+@use '../global/variable'as *;
+
+
+/*検索フォーム*/
+.search-form {
+     line-height: 1.7;
+     padding: 1rem 0.5rem;
+
+     @include pc {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          padding: 0;
+          width: 16.25rem;
+
+     }
+}
+
+.search-field {
+     max-width: 10rem;
+     min-height: 2rem;
+     padding: .2rem;
+     border: 1px solid #767268;
+     border-radius: 0.2rem;
+}
+
+.search-submit {
+     min-height: 2rem;
+     padding: .2rem .7rem;
+     color: #FFFFFF;
+     border: 1px solid $header-item-color;
+     border-radius: 0.2rem;
+     background-color: $header-item-color;
+}
+
+/*検索結果*/
+.search-ResultNum,
+.search-NoResult {
+     margin-bottom: 1rem;
+}

@@ -1,0 +1,89 @@
+@use '../global/responsive'as *;
+@use '../global/variable'as *;
+
+
+.page-content {
+     color: $widget-color;
+     display: flex;
+     flex-wrap: wrap;
+
+     &__container {
+          position: relative;
+          width: 100%;
+
+          @include pc {
+               padding: 0 1rem;
+               flex: 0 0 66.66667%;
+               max-width: 66.66667%;
+          }
+     }
+
+     &__header {
+          margin-bottom: 2.8125rem;
+
+     }
+
+     &__title {
+          font-family: 'EB Garamond', serif;
+          font-weight: 500;
+          font-size: 1.875rem;
+          line-height: 1.5;
+
+          @include pc {
+               font-size: 2.25rem;
+          }
+     }
+
+     &__subtitle {
+          color: #FFFFFF;
+          display: block;
+          width: 12rem;
+          text-align: center;
+          background-color: $footer-border-color;
+          margin-bottom: 0.5rem;
+          font-size: 0.875rem;
+          line-height: 1.5;
+     }
+
+     &__body {
+          margin-top: 1rem;
+          line-height: 1.7;
+          margin-bottom: 2.8125rem;
+
+          p {
+               margin-bottom: 1.5rem;
+          }
+
+          h2 {
+               font-family: 'EB Garamond', serif;
+               font-weight: 500;
+               font-size: 1.75rem;
+               margin-bottom: 1.2rem;
+          }
+     }
+
+     &__eyecatch {
+          margin-bottom: 1.875rem;
+     }
+
+}
+
+
+/*個別投稿ページ（single.php）のページタイトルの下にあるカテゴリー名と日付*/
+.content-meta {
+     color: $content-meta-color;
+     font-size: 0.875rem;
+
+     a {
+          display: inline-block;
+          margin-top: 1rem;
+     }
+
+     /*カテゴリー名と投稿日の区切りスラッシュ*/
+     &__date {
+          &::before {
+               content: "/";
+          }
+     }
+
+}

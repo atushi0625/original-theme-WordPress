@@ -1,0 +1,135 @@
+@use '../global/responsive'as *;
+@use '../global/variable'as *;
+
+.header {
+     position: sticky;
+     // position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 100;
+     padding: 1rem;
+     background-color: #fff;
+     height: auto;
+
+     @include pc {
+          display: flex;
+          justify-content: space-between;
+          padding: 1.5rem 1rem;
+          align-items: baseline;
+
+     }
+
+
+     &__sitename {
+          line-height: 1.5;
+     }
+
+     &__sitename-link {
+          display: block;
+          width: 11.25rem;
+
+          @include pc {
+               width: 18.75rem;
+          }
+     }
+
+     &__tagline {
+          font-size: 0.75rem;
+          display: block;
+          padding-left: 0.2rem;
+
+          @include pc {
+               padding-left: 0.4rem;
+               font-size: 1rem;
+          }
+     }
+}
+
+.header-nav {
+     position: fixed;
+     top: 0;
+     right: 0;
+     z-index: 10;
+     background-color: $header-nav-color;
+     width: 16.25rem;
+     height: 100vh;
+     margin-right: -16.25rem;
+     transition: margin-right .2s ease-in-out;
+
+     @include pc {
+          position: static;
+          width: auto;
+          background-color: transparent;
+          height: auto;
+          margin-right: auto;
+          flex: 1;
+     }
+
+     &__items {
+          overflow-y: auto;
+
+          @include pc {
+               display: flex;
+               justify-content: flex-end;
+          }
+     }
+
+     &__item {
+          border-bottom: 1px dashed $header-border-color;
+
+          @include pc {
+               border-bottom: none;
+          }
+
+          a {
+               font-family: 'EB Garamond', serif;
+               font-weight: 500;
+               position: relative;
+               font-size: 0.9375rem;
+               display: block;
+               padding: 1rem;
+               color: $header-item-color;
+               overflow-wrap: break-word;
+
+
+               /*ホバーするとメニューの下に線が出てくる*/
+               &::after {
+                    @include pc {
+                         position: absolute;
+                         bottom: 0;
+                         left: 0;
+                         display: block;
+                         width: 0;
+                         height: 2px;
+                         content: "";
+                         transition: all .2s ease-in-out;
+                         background-color: $footer-border-color;
+                    }
+               }
+
+               &:hover,
+               &:focus {
+                    &::after {
+                         @include pc {
+                              width: 100%;
+                         }
+                    }
+               }
+
+
+               @include pc {
+                    font-size: 1rem;
+                    text-align: center;
+
+               }
+          }
+     }
+
+}
+
+
+/*ハンバーガーアイコンがクリックされたら発火*/
+body.is-drawer-active .header-nav {
+     margin-right: 0;
+}

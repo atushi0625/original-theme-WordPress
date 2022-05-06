@@ -1,0 +1,85 @@
+@use '../global/responsive'as *;
+@use '../global/variable'as *;
+
+html {
+     font-size: 16px;
+}
+
+body {
+     font-family: 'Noto Sans JP', sans-serif;
+     font-weight: 300;
+     // font-family: system-ui, -apple-system, sans-serif;
+
+     line-height: 1;
+     color: $widget-color;
+
+     /*ドロワーメニュー閉時の背景*/
+     &::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 0;
+          content: "";
+          transition: background-color .2s ease-in-out;
+     }
+}
+
+
+/*ドロワーメニュー開時の背景*/
+body.is-drawer-active {
+     position: relative;
+
+     &::after {
+          width: 100%;
+          height: 100%;
+          content: "";
+          background-color: rgba(0, 0, 0, 0.5);
+
+     }
+}
+
+.content-Wrap {
+     overflow: hidden;
+}
+
+.container {
+     max-width: 75rem;
+     width: 100%;
+     margin: 0 auto;
+     padding: 0 1rem;
+}
+
+.content {
+     color: $widget-color;
+     padding: 2.8125rem 1rem;
+
+     @include pc {
+          padding: 3.75em 1rem;
+
+     }
+}
+
+
+img {
+     max-width: 100%;
+     height: auto;
+     display: block;
+     object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+     font-family: 'Noto Sans JP', sans-serif;
+     font-weight: 500;
+
+}
+
+
+table tbody tr td {
+     vertical-align: middle;
+}

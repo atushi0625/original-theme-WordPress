@@ -1,0 +1,60 @@
+/*ブロックエディターで下記に指定したボタンが選択できる*/
+/*来店予約はこちらボタン*/
+
+.wp-block-button__link {
+     text-decoration: none;
+     border-radius: 0.2em;
+     opacity: 1;
+     transition: all 0.2s ease-in-out;
+     padding: 1em;
+     display: inline-block;
+     background-color: #FFFFFF;
+     color: #00A1C6;
+     border: 1px solid #00A1C6;
+}
+
+.wp-block-button__link:hover,
+.wp-block-button__link:focus {
+     background-color: #00A1C6;
+     color: #FFFFFF;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+     border: 1px solid #00A1C6;
+     padding: 1em;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover,
+.wp-block-button.is-style-outline .wp-block-button__link:focus {
+     background-color: #00A1C6;
+     color: #FFFFFF;
+}
+
+.wp-block-button.is-style-arrow .wp-block-button__link {
+     display: flex;
+     align-items: center;
+     background-color: #00A1C6;
+     color: #FFFFFF;
+}
+
+.wp-block-button.is-style-arrow .wp-block-button__link::after {
+     content: '';
+     margin-left: 0.5em;
+     width: 10px;
+     height: 18px;
+     display: flex;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: contain;
+     background-image: url("data:image/svg+xml,%3Csvg width='9' height='16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 15a1 1 0 01-.77-1.64L5.71 8 1.39 2.63a1 1 0 01.15-1.41A1 1 0 013 1.37l4.83 6a1 1 0 010 1.27l-5 6A1 1 0 012 15z' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.wp-block-button.is-style-arrow .wp-block-button__link:hover {
+     filter: contrast(150%);
+}
+
+.wp-block-button.is-style-fixed .wp-block-button__link {
+     width: 80vw;
+     max-width: 20em;
+     font-size: 1rem;
+}

@@ -1,0 +1,48 @@
+@use '../global/responsive'as *;
+@use '../global/variable'as *;
+
+
+/*ブロックエディターにフォントサイズを対応させる*/
+.has-x-small-font-size {
+     font-size: 0.63636rem;
+}
+
+.has-small-font-size {
+     font-size: 0.72727rem;
+}
+
+.has-normal-font-size {
+     font-size: 0.81818rem;
+}
+
+.has-large-font-size {
+     font-size: 1.09091rem;
+}
+
+.has-huge-font-size {
+     font-size: 1.63636rem;
+}
+
+@include tab {
+
+     .has-x-small-font-size {
+          font-size: 0.875rem;
+     }
+
+     .has-small-font-size {
+          font-size: 1rem;
+     }
+
+     .has-normal-font-size {
+          font-size: 1.125rem;
+     }
+
+     .has-large-font-size {
+          font-size: 1.5rem;
+     }
+
+     .has-huge-font-size {
+          font-size: 2.4375rem;
+          // font-size: 2.25rem;
+     }
+}

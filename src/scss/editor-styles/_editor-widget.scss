@@ -1,0 +1,49 @@
+@use '../global/responsive'as *;
+@use '../global/variable'as *;
+
+
+/*ウィジェットブロック内*/
+
+/*各ウィジェットの見出し*/
+.widget_block {
+     h2 {
+          margin-bottom: 1.2rem;
+          padding-top: 1rem;
+          border-top: 2px solid $footer-border-color;
+          font-size: 1.125rem;
+     }
+}
+
+/*1番めのウィジェット*/
+.footer-widget-list {
+     li {
+          padding: 1rem 0;
+
+          &:not(:last-child) {
+               border-bottom: 1px solid #D5D1CA;
+          }
+
+     }
+}
+
+/*２番目のウィジェット*/
+.tag-cloud-link {
+     font-size: .875rem !important;
+     display: inline-block;
+     margin-bottom: 1rem;
+     padding: .5rem;
+     color: $footer-border-color;
+     border: 1px solid $footer-border-color;
+     border-radius: 1rem;
+}
+
+/*３番目のウィジェット*/
+.wp-block-search__button {
+     background-color: $header-item-color;
+     color: #FFFFFF;
+     border: none;
+     border-radius: 0.2rem;
+     fill: #FFFFFF;
+     padding: .375rem .625rem;
+     margin-left: .625rem;
+}

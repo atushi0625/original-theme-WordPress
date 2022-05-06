@@ -1,0 +1,83 @@
+@use '../global/responsive'as *;
+@use '../global/variable'as *;
+
+
+/*ページネーション（アーカイブページで使用する）*/
+.pagination {
+     margin: 2.8125rem 0;
+     text-align: center;
+
+     .page-numbers {
+          display: inline-block;
+          padding: 0.7rem 1rem;
+          font-size: 0.875rem;
+          color: $widget-color;
+          border: 2px solid $pagination-color;
+          border-radius: 0.2rem;
+          background-color: $header-nav-color;
+
+          &:hover {
+
+               border-color: #00A1C6;
+          }
+
+          @include pc {
+               font-size: 1rem;
+
+          }
+     }
+
+     .current {
+
+          color: #fff;
+          background-color: $footer-border-color;
+          border-color: $footer-border-color;
+     }
+
+     .sr-only {
+          position: absolute;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          width: 1px;
+          height: 1px;
+          margin: -1px;
+          padding: 0;
+          border: 0;
+     }
+
+}
+
+
+/*前後の記事ページネーション（個別投稿ページで使用する）*/
+.content-nav {
+     color: $content-meta-color;
+     border-top: 1px dotted $header-border-color;
+     margin: 1.875rem 0;
+     padding-top: 1.875rem;
+
+     a {
+
+          &:hover,
+          &:focus {
+               text-decoration: underline dotted;
+          }
+
+     }
+
+
+     @include tab {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+     }
+}
+
+.content-nav_prev {
+     margin-bottom: 1rem;
+}
+
+.content-nav_next {
+     text-align: right;
+     margin-bottom: 1rem;
+
+}

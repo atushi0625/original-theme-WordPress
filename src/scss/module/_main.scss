@@ -1,0 +1,31 @@
+@use '../global/responsive'as *;
+@use '../global/variable'as *;
+
+
+
+.main-title {
+     font-family: 'EB Garamond', serif;
+     font-weight: 600;
+     text-shadow: 2px 2px 3px rgba(67, 65, 59, 0.8);
+     line-height: 1.5;
+
+}
+
+.main-bg {
+     position: relative;
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     min-height: 50vh;
+     width: 100vw;
+     margin: 0 calc(50% - 50vw);
+
+     @include tab {
+          min-height: 70vh;
+     }
+
+     @include pc {
+          min-height: 80vh;
+     }
+
+}
